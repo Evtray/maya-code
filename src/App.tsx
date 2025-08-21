@@ -14,6 +14,11 @@ import CartPage from './pages/CartPage'
 import CheckoutPage from './pages/CheckoutPage'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
+import SelectionPage from './pages/SelectionPage'
+import LeadCaptureSoluble from './pages/LeadCaptureSoluble'
+import LeadCaptureGrano from './pages/LeadCaptureGrano'
+import LeadConfirmation from './pages/LeadConfirmation'
+import QuotationPage from './pages/QuotationPage'
 
 function App() {
   return (
@@ -27,6 +32,11 @@ function App() {
             <main style={{ flex: 1 }}>
               <Routes>
                 <Route path="/" element={<HomePage />} />
+                <Route path="/seleccion" element={<SelectionPage />} />
+                <Route path="/lead-capture/soluble" element={<LeadCaptureSoluble />} />
+                <Route path="/lead-capture/grano" element={<LeadCaptureGrano />} />
+                <Route path="/confirmacion-lead" element={<LeadConfirmation />} />
+                <Route path="/cotizacion" element={<QuotationPage />} />
                 <Route path="/productos" element={<ProductsPage />} />
                 <Route path="/producto/:id" element={<ProductDetailPage />} />
                 <Route path="/carrito" element={<CartPage />} />

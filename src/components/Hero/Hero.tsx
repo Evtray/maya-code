@@ -218,13 +218,13 @@ export const Hero: React.FC = () => {
           </p>
 
           <CTAButtons>
-            <PrimaryButton to="/productos?category=soluble">
+            <PrimaryButton to="/seleccion">
               <Zap />
-              Quiero Café Rápido
+              Comenzar Mi Experiencia
             </PrimaryButton>
-            <SecondaryButton to="/productos?category=grano">
+            <SecondaryButton to="/productos">
               <Coffee />
-              Personalizar Mi Café
+              Ver Catálogo Completo
             </SecondaryButton>
           </CTAButtons>
 
