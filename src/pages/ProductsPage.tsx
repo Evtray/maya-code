@@ -5,7 +5,7 @@ import { ProductCard } from '../components/ProductCard/ProductCard'
 import { theme } from '../styles/theme'
 import { Product } from '../types'
 import { useCart } from '../context/CartContext'
-import { Grid, List } from 'lucide-react'
+import { Grid, List, Database, Code, Smartphone } from 'lucide-react'
 
 const PageContainer = styled.div`
   max-width: 1200px;
@@ -120,7 +120,7 @@ const ProductGrid = styled.div<{ viewMode: 'grid' | 'list' }>`
 
 const SortSelect = styled.select`
   padding: ${theme.spacing.sm} ${theme.spacing.md};
-  border: 1px solid ${theme.colors.coffee.light};
+  border: 1px solid ${theme.colors.tech.light};
   border-radius: ${theme.borderRadius.sm};
   background: white;
   color: ${theme.colors.text.primary};
@@ -129,80 +129,106 @@ const SortSelect = styled.select`
 const mockProducts: Product[] = [
   {
     id: '1',
-    name: 'Café Soluble Premium Antigua',
-    description: 'Sabor intenso y aroma inconfundible',
-    price: 85.00,
-    category: 'soluble',
-    origin: 'Antigua Guatemala',
-    intensity: 'fuerte',
-    flavorNotes: ['Chocolate', 'Caramelo', 'Nuez'],
-    image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400',
-    stock: 50,
+    name: 'Módulo de Inventario Básico (ERP)',
+    description: 'Gestión completa de productos, entradas y salidas de inventario',
+    price: 199.00,
+    category: 'erp',
+    origin: 'MayaCode Guatemala',
+    intensity: 'profesional',
+    flavorNotes: ['Control de Stock', 'Alertas', 'Reportes'],
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400',
+    stock: 100,
     isNew: true,
-    discount: 15
+    discount: 20,
+    isBestSeller: true
   },
   {
     id: '2',
-    name: 'Café en Grano Huehuetenango',
-    description: 'Notas frutales y acidez balanceada',
-    price: 125.00,
-    category: 'grano',
-    origin: 'Huehuetenango',
-    intensity: 'medio',
-    flavorNotes: ['Frutas rojas', 'Miel', 'Cítricos'],
-    image: 'https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400',
-    stock: 30,
+    name: 'Formulario Web con Validación',
+    description: 'Snippet listo para copiar y pegar con validación completa',
+    price: 99.00,
+    category: 'web',
+    origin: 'MayaCode Guatemala',
+    intensity: 'básico',
+    flavorNotes: ['Anti-spam', 'Validación', 'Personalizable'],
+    image: 'https://images.unsplash.com/photo-1555421689-491a97ff2040?w=400',
+    stock: 200,
     isBestSeller: true
   },
   {
     id: '3',
-    name: 'Café Soluble Descafeinado',
-    description: 'Todo el sabor sin cafeína',
-    price: 75.00,
-    category: 'soluble',
-    origin: 'Cobán',
-    intensity: 'suave',
-    flavorNotes: ['Vainilla', 'Almendra', 'Miel'],
-    image: 'https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=400',
-    stock: 45
+    name: 'App de Pedidos Lite',
+    description: 'Aplicación móvil para restaurantes y delivery',
+    price: 499.00,
+    category: 'mobile',
+    origin: 'MayaCode Guatemala',
+    intensity: 'avanzado',
+    flavorNotes: ['Menú Digital', 'Carrito', 'PDF'],
+    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400',
+    stock: 50,
+    isNew: true,
+    discount: 25
   },
   {
     id: '4',
-    name: 'Café en Grano Edición Especial',
-    description: 'Reserva limitada de altura',
-    price: 165.00,
-    category: 'grano',
-    origin: 'Alta Verapaz',
-    intensity: 'fuerte',
-    flavorNotes: ['Chocolate negro', 'Especias', 'Tabaco'],
-    image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400',
-    stock: 20,
-    isNew: true
+    name: 'Sistema POS Básico',
+    description: 'Punto de venta simplificado para tiendas pequeñas',
+    price: 299.00,
+    category: 'erp',
+    origin: 'MayaCode Guatemala',
+    intensity: 'intermedio',
+    flavorNotes: ['Ventas', 'Inventario', 'Reportes'],
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400',
+    stock: 75
   },
   {
     id: '5',
-    name: 'Café Soluble Orgánico',
-    description: 'Certificado orgánico, sabor puro',
-    price: 95.00,
-    category: 'soluble',
-    origin: 'San Marcos',
-    intensity: 'medio',
-    flavorNotes: ['Cacao', 'Frutos secos', 'Panela'],
-    image: 'https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=400',
-    stock: 35
+    name: 'Landing Page Profesional',
+    description: 'Plantilla responsive lista para personalizar',
+    price: 149.00,
+    category: 'web',
+    origin: 'MayaCode Guatemala',
+    intensity: 'intermedio',
+    flavorNotes: ['SEO', 'Responsive', 'Optimizada'],
+    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400',
+    stock: 150
   },
   {
     id: '6',
-    name: 'Café en Grano Single Origin',
-    description: 'Una sola finca, sabor único',
-    price: 145.00,
-    category: 'grano',
-    origin: 'Acatenango',
-    intensity: 'medio',
-    flavorNotes: ['Floral', 'Cítrico', 'Té negro'],
-    image: 'https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400',
-    stock: 25,
-    isBestSeller: true
+    name: 'Dashboard Analytics',
+    description: 'Panel de control con gráficas y métricas',
+    price: 249.00,
+    category: 'web',
+    origin: 'MayaCode Guatemala',
+    intensity: 'avanzado',
+    flavorNotes: ['Gráficas', 'Tiempo Real', 'Exportable'],
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400',
+    stock: 80,
+    isNew: true
+  },
+  {
+    id: '7',
+    name: 'Chat Bot Básico',
+    description: 'Asistente virtual para atención al cliente',
+    price: 179.00,
+    category: 'web',
+    origin: 'MayaCode Guatemala',
+    intensity: 'intermedio',
+    flavorNotes: ['24/7', 'Respuestas Automáticas', 'Fácil Configuración'],
+    image: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400',
+    stock: 100
+  },
+  {
+    id: '8',
+    name: 'App de Citas',
+    description: 'Sistema de reservas para servicios profesionales',
+    price: 399.00,
+    category: 'mobile',
+    origin: 'MayaCode Guatemala',
+    intensity: 'avanzado',
+    flavorNotes: ['Calendario', 'Recordatorios', 'Multi-usuario'],
+    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400',
+    stock: 60
   }
 ]
 
@@ -228,8 +254,21 @@ const ProductsPage: React.FC = () => {
     if (filters.intensity) {
       filtered = filtered.filter(p => p.intensity === filters.intensity)
     }
-    if (filters.origin) {
-      filtered = filtered.filter(p => p.origin === filters.origin)
+    if (filters.priceRange) {
+      switch(filters.priceRange) {
+        case '0-100':
+          filtered = filtered.filter(p => p.price <= 100)
+          break
+        case '100-200':
+          filtered = filtered.filter(p => p.price > 100 && p.price <= 200)
+          break
+        case '200-300':
+          filtered = filtered.filter(p => p.price > 200 && p.price <= 300)
+          break
+        case '300+':
+          filtered = filtered.filter(p => p.price > 300)
+          break
+      }
     }
 
     switch (sortBy) {
@@ -257,85 +296,112 @@ const ProductsPage: React.FC = () => {
   return (
     <PageContainer>
       <PageHeader>
-        <h1>Nuestros Productos</h1>
-        <p>Explora nuestra selección de cafés guatemaltecos premium</p>
+        <h1>Catálogo de Productos Digitales</h1>
+        <p>Soluciones tecnológicas listas para usar, accesibles y adaptadas para PyMEs</p>
       </PageHeader>
 
       <ContentLayout>
         <Sidebar>
           <FilterSection>
-            <h3>Categoría</h3>
+            <h3>Tipo de Producto</h3>
             <FilterOption>
               <input
                 type="checkbox"
-                checked={filters.category === 'soluble'}
-                onChange={() => handleFilterChange('category', 'soluble')}
+                checked={filters.category === 'erp'}
+                onChange={() => handleFilterChange('category', 'erp')}
               />
-              Café Soluble
+              <Database size={16} />
+              Sistemas ERP
             </FilterOption>
             <FilterOption>
               <input
                 type="checkbox"
-                checked={filters.category === 'grano'}
-                onChange={() => handleFilterChange('category', 'grano')}
+                checked={filters.category === 'web'}
+                onChange={() => handleFilterChange('category', 'web')}
               />
-              Café en Grano
-            </FilterOption>
-          </FilterSection>
-
-          <FilterSection>
-            <h3>Intensidad</h3>
-            <FilterOption>
-              <input
-                type="checkbox"
-                checked={filters.intensity === 'suave'}
-                onChange={() => handleFilterChange('intensity', 'suave')}
-              />
-              Suave
+              <Code size={16} />
+              Desarrollo Web
             </FilterOption>
             <FilterOption>
               <input
                 type="checkbox"
-                checked={filters.intensity === 'medio'}
-                onChange={() => handleFilterChange('intensity', 'medio')}
+                checked={filters.category === 'mobile'}
+                onChange={() => handleFilterChange('category', 'mobile')}
               />
-              Medio
-            </FilterOption>
-            <FilterOption>
-              <input
-                type="checkbox"
-                checked={filters.intensity === 'fuerte'}
-                onChange={() => handleFilterChange('intensity', 'fuerte')}
-              />
-              Fuerte
+              <Smartphone size={16} />
+              Apps Móviles
             </FilterOption>
           </FilterSection>
 
           <FilterSection>
-            <h3>Origen</h3>
+            <h3>Nivel de Complejidad</h3>
             <FilterOption>
               <input
                 type="checkbox"
-                checked={filters.origin === 'Antigua Guatemala'}
-                onChange={() => handleFilterChange('origin', 'Antigua Guatemala')}
+                checked={filters.intensity === 'básico'}
+                onChange={() => handleFilterChange('intensity', 'básico')}
               />
-              Antigua
+              Básico
             </FilterOption>
             <FilterOption>
               <input
                 type="checkbox"
-                checked={filters.origin === 'Huehuetenango'}
-                onChange={() => handleFilterChange('origin', 'Huehuetenango')}
+                checked={filters.intensity === 'intermedio'}
+                onChange={() => handleFilterChange('intensity', 'intermedio')}
               />
-              Huehuetenango
+              Intermedio
             </FilterOption>
             <FilterOption>
               <input
                 type="checkbox"
-                checked={filters.origin === 'Alta Verapaz'}
-                onChange={() => handleFilterChange('origin', 'Alta Verapaz')}
+                checked={filters.intensity === 'avanzado'}
+                onChange={() => handleFilterChange('intensity', 'avanzado')}
               />
-              Alta Verapaz
+              Avanzado
+            </FilterOption>
+            <FilterOption>
+              <input
+                type="checkbox"
+                checked={filters.intensity === 'profesional'}
+                onChange={() => handleFilterChange('intensity', 'profesional')}
+              />
+              Profesional
+            </FilterOption>
+          </FilterSection>
+
+          <FilterSection>
+            <h3>Rango de Precio</h3>
+            <FilterOption>
+              <input
+                type="checkbox"
+                checked={filters.priceRange === '0-100'}
+                onChange={() => handleFilterChange('priceRange', '0-100')}
+              />
+              Q0 - Q100
+            </FilterOption>
+            <FilterOption>
+              <input
+                type="checkbox"
+                checked={filters.priceRange === '100-200'}
+                onChange={() => handleFilterChange('priceRange', '100-200')}
+              />
+              Q100 - Q200
+            </FilterOption>
+            <FilterOption>
+              <input
+                type="checkbox"
+                checked={filters.priceRange === '200-300'}
+                onChange={() => handleFilterChange('priceRange', '200-300')}
+              />
+              Q200 - Q300
+            </FilterOption>
+            <FilterOption>
+              <input
+                type="checkbox"
+                checked={filters.priceRange === '300+'}
+                onChange={() => handleFilterChange('priceRange', '300+')}
+              />
+              Más de Q300
             </FilterOption>
           </FilterSection>
         </Sidebar>

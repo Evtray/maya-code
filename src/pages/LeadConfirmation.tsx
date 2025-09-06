@@ -6,7 +6,7 @@ import { theme } from '../styles/theme'
 
 const Container = styled.div`
   min-height: 100vh;
-  background: linear-gradient(135deg, ${theme.colors.coffee.cream} 0%, ${theme.colors.background} 100%);
+  background: linear-gradient(135deg, ${theme.colors.tech.accent} 0%, ${theme.colors.background} 100%);
   padding: ${theme.spacing.xxl} ${theme.spacing.lg};
 `
 
@@ -67,7 +67,7 @@ const Subtitle = styled.p`
 
 const EmailPreview = styled.div`
   background: ${theme.colors.background};
-  border: 2px solid ${theme.colors.coffee.cream};
+  border: 2px solid ${theme.colors.tech.accent};
   border-radius: ${theme.borderRadius.md};
   padding: ${theme.spacing.lg};
   margin: ${theme.spacing.xl} 0;
@@ -114,7 +114,7 @@ const EmailPreview = styled.div`
     
     .discount-code {
       background: ${theme.colors.secondary};
-      color: ${theme.colors.coffee.dark};
+      color: ${theme.colors.tech.dark};
       padding: ${theme.spacing.md};
       border-radius: ${theme.borderRadius.md};
       text-align: center;
@@ -158,7 +158,7 @@ const OfferCard = styled.div`
       left: 50%;
       transform: translateX(-50%);
       background: ${theme.colors.secondary};
-      color: ${theme.colors.coffee.dark};
+      color: ${theme.colors.tech.dark};
       padding: ${theme.spacing.xs} ${theme.spacing.md};
       border-radius: ${theme.borderRadius.full};
       font-size: 0.75rem;
@@ -169,7 +169,7 @@ const OfferCard = styled.div`
   .icon {
     width: 60px;
     height: 60px;
-    background: ${theme.colors.coffee.cream};
+    background: ${theme.colors.tech.accent};
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -248,7 +248,7 @@ const CTAButton = styled.button`
   gap: ${theme.spacing.sm};
   
   &:hover {
-    background: ${theme.colors.coffee.dark};
+    background: ${theme.colors.tech.dark};
     gap: ${theme.spacing.md};
   }
   
@@ -270,7 +270,7 @@ const CTAButton = styled.button`
 `
 
 const CustomerData = styled.div`
-  background: ${theme.colors.coffee.cream};
+  background: ${theme.colors.tech.accent};
   border-radius: ${theme.borderRadius.md};
   padding: ${theme.spacing.lg};
   margin-top: ${theme.spacing.xl};

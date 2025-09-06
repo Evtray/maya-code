@@ -20,7 +20,7 @@ const FormContainer = styled.div`
 `
 
 const FormHeader = styled.div`
-  background: linear-gradient(135deg, ${theme.colors.coffee.dark} 0%, ${theme.colors.primary} 100%);
+  background: linear-gradient(135deg, ${theme.colors.tech.dark} 0%, ${theme.colors.primary} 100%);
   padding: ${theme.spacing.xxl};
   text-align: center;
   color: white;
@@ -56,7 +56,7 @@ const FormSection = styled.div`
     color: ${theme.colors.primary};
     margin-bottom: ${theme.spacing.lg};
     padding-bottom: ${theme.spacing.sm};
-    border-bottom: 2px solid ${theme.colors.coffee.cream};
+    border-bottom: 2px solid ${theme.colors.tech.accent};
   }
 `
 
@@ -86,7 +86,7 @@ const Label = styled.label`
 const Input = styled.input`
   width: 100%;
   padding: ${theme.spacing.md};
-  border: 2px solid ${theme.colors.coffee.cream};
+  border: 2px solid ${theme.colors.tech.accent};
   border-radius: ${theme.borderRadius.md};
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -101,7 +101,7 @@ const Input = styled.input`
 const TextArea = styled.textarea`
   width: 100%;
   padding: ${theme.spacing.md};
-  border: 2px solid ${theme.colors.coffee.cream};
+  border: 2px solid ${theme.colors.tech.accent};
   border-radius: ${theme.borderRadius.md};
   font-size: 1rem;
   resize: vertical;
@@ -119,7 +119,7 @@ const TextArea = styled.textarea`
 const Select = styled.select`
   width: 100%;
   padding: ${theme.spacing.md};
-  border: 2px solid ${theme.colors.coffee.cream};
+  border: 2px solid ${theme.colors.tech.accent};
   border-radius: ${theme.borderRadius.md};
   font-size: 1rem;
   background: white;
@@ -144,19 +144,19 @@ const CheckboxOption = styled.label`
   display: flex;
   align-items: center;
   padding: ${theme.spacing.md};
-  border: 2px solid ${theme.colors.coffee.cream};
+  border: 2px solid ${theme.colors.tech.accent};
   border-radius: ${theme.borderRadius.md};
   cursor: pointer;
   transition: all 0.3s ease;
   
   &:hover {
     border-color: ${theme.colors.secondary};
-    background: ${theme.colors.coffee.cream};
+    background: ${theme.colors.tech.accent};
   }
   
   &.selected {
     border-color: ${theme.colors.primary};
-    background: ${theme.colors.coffee.cream};
+    background: ${theme.colors.tech.accent};
   }
   
   input {
@@ -175,19 +175,19 @@ const RadioOption = styled.label`
   display: flex;
   align-items: center;
   padding: ${theme.spacing.md};
-  border: 2px solid ${theme.colors.coffee.cream};
+  border: 2px solid ${theme.colors.tech.accent};
   border-radius: ${theme.borderRadius.md};
   cursor: pointer;
   transition: all 0.3s ease;
   
   &:hover {
     border-color: ${theme.colors.secondary};
-    background: ${theme.colors.coffee.cream};
+    background: ${theme.colors.tech.accent};
   }
   
   &.selected {
     border-color: ${theme.colors.primary};
-    background: ${theme.colors.coffee.cream};
+    background: ${theme.colors.tech.accent};
   }
   
   input {
@@ -207,7 +207,7 @@ const SubmitButton = styled.button`
   margin-top: ${theme.spacing.xl};
   
   &:hover {
-    background: ${theme.colors.coffee.dark};
+    background: ${theme.colors.tech.dark};
     transform: translateY(-2px);
     box-shadow: ${theme.shadows.lg};
   }
@@ -215,7 +215,7 @@ const SubmitButton = styled.button`
 
 const PremiumBadge = styled.div`
   background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-  color: ${theme.colors.coffee.dark};
+  color: ${theme.colors.tech.dark};
   padding: ${theme.spacing.md} ${theme.spacing.lg};
   border-radius: ${theme.borderRadius.md};
   margin-bottom: ${theme.spacing.xl};

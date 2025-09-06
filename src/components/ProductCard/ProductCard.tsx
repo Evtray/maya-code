@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { ShoppingCart, Star, Coffee } from 'lucide-react'
+import { ShoppingCart, Star, Code } from 'lucide-react'
 import { theme } from '../../styles/theme'
 import { Product } from '../../types'
 
@@ -26,7 +26,7 @@ const ImageContainer = styled.div`
   width: 100%;
   padding-top: 100%;
   overflow: hidden;
-  background: ${theme.colors.coffee.cream};
+  background: ${theme.colors.tech.accent};
 `
 
 const ProductImage = styled.img`
@@ -116,8 +116,8 @@ const FlavorNotes = styled.div`
 
 const FlavorNote = styled.span`
   padding: ${theme.spacing.xs} ${theme.spacing.sm};
-  background: ${theme.colors.coffee.cream};
-  color: ${theme.colors.coffee.dark};
+  background: ${theme.colors.tech.accent};
+  color: ${theme.colors.tech.dark};
   border-radius: ${theme.borderRadius.sm};
   font-size: 0.75rem;
 `
@@ -147,7 +147,7 @@ const CardFooter = styled.div`
   justify-content: space-between;
   align-items: center;
   padding-top: ${theme.spacing.md};
-  border-top: 1px solid ${theme.colors.coffee.cream};
+  border-top: 1px solid ${theme.colors.border};
 `
 
 const Price = styled.div`
@@ -188,15 +188,15 @@ const ActionButton = styled.button`
   }
 
   &:hover {
-    background: ${theme.colors.coffee.dark};
+    background: ${theme.colors.secondary};
     transform: scale(1.1);
   }
 `
 
 const ViewButton = styled(Link)`
   padding: ${theme.spacing.sm} ${theme.spacing.md};
-  background: ${theme.colors.coffee.cream};
-  color: ${theme.colors.coffee.dark};
+  background: ${theme.colors.tech.accent};
+  color: ${theme.colors.tech.dark};
   border-radius: ${theme.borderRadius.sm};
   font-weight: 500;
   transition: all 0.3s ease;
@@ -221,7 +221,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }
     <Card>
       <ImageContainer>
         <ProductImage 
-          src={product.image || '/coffee-placeholder.jpg'} 
+          src={product.image || '/tech-placeholder.jpg'} 
           alt={product.name}
         />
         <Badges>
@@ -232,11 +232,16 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }
       </ImageContainer>
 
       <CardContent>
-        <Category>{product.category === 'soluble' ? 'Café Soluble' : 'Café en Grano'}</Category>
+        <Category>
+          {product.category === 'erp' ? 'Sistema ERP' : 
+           product.category === 'web' ? 'Desarrollo Web' : 
+           product.category === 'mobile' ? 'App Móvil' :
+           product.category === 'soluble' ? 'Solución Rápida' : 'Producto Digital'}
+        </Category>
         <ProductName>{product.name}</ProductName>
         
         <Origin>
-          <Coffee />
+          <Code />
           {product.origin}
         </Origin>
 

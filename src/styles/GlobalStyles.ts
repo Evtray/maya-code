@@ -86,7 +86,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: ${theme.fonts.main};
     width: 100%;
     padding: ${theme.spacing.sm} ${theme.spacing.md};
-    border: 1px solid ${theme.colors.coffee.light};
+    border: 1px solid ${theme.colors.tech.light};
     border-radius: ${theme.borderRadius.sm};
     font-size: 1rem;
     transition: border-color 0.3s ease;

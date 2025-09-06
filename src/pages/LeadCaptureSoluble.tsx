@@ -71,7 +71,7 @@ const Label = styled.label`
 const Input = styled.input`
   width: 100%;
   padding: ${theme.spacing.md};
-  border: 2px solid ${theme.colors.coffee.cream};
+  border: 2px solid ${theme.colors.tech.accent};
   border-radius: ${theme.borderRadius.md};
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -86,7 +86,7 @@ const Input = styled.input`
 const TextArea = styled.textarea`
   width: 100%;
   padding: ${theme.spacing.md};
-  border: 2px solid ${theme.colors.coffee.cream};
+  border: 2px solid ${theme.colors.tech.accent};
   border-radius: ${theme.borderRadius.md};
   font-size: 1rem;
   resize: vertical;
@@ -104,7 +104,7 @@ const TextArea = styled.textarea`
 const Select = styled.select`
   width: 100%;
   padding: ${theme.spacing.md};
-  border: 2px solid ${theme.colors.coffee.cream};
+  border: 2px solid ${theme.colors.tech.accent};
   border-radius: ${theme.borderRadius.md};
   font-size: 1rem;
   background: white;
@@ -129,19 +129,19 @@ const RadioOption = styled.label`
   display: flex;
   align-items: center;
   padding: ${theme.spacing.md};
-  border: 2px solid ${theme.colors.coffee.cream};
+  border: 2px solid ${theme.colors.tech.accent};
   border-radius: ${theme.borderRadius.md};
   cursor: pointer;
   transition: all 0.3s ease;
   
   &:hover {
     border-color: ${theme.colors.secondary};
-    background: ${theme.colors.coffee.cream};
+    background: ${theme.colors.tech.accent};
   }
   
   &.selected {
     border-color: ${theme.colors.primary};
-    background: ${theme.colors.coffee.cream};
+    background: ${theme.colors.tech.accent};
   }
   
   input {
@@ -161,7 +161,7 @@ const SubmitButton = styled.button`
   margin-top: ${theme.spacing.xl};
   
   &:hover {
-    background: ${theme.colors.coffee.dark};
+    background: ${theme.colors.tech.dark};
     transform: translateY(-2px);
     box-shadow: ${theme.shadows.lg};
   }
@@ -175,7 +175,7 @@ const Disclaimer = styled.p`
 `
 
 const Benefits = styled.div`
-  background: ${theme.colors.coffee.cream};
+  background: ${theme.colors.tech.accent};
   border-radius: ${theme.borderRadius.md};
   padding: ${theme.spacing.lg};
   margin-bottom: ${theme.spacing.xl};

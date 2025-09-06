@@ -3,9 +3,9 @@ export interface Product {
   name: string
   description: string
   price: number
-  category: 'soluble' | 'grano'
+  category: 'soluble' | 'grano' | 'erp' | 'web' | 'mobile'
   origin: string
-  intensity: 'suave' | 'medio' | 'fuerte'
+  intensity: 'suave' | 'medio' | 'fuerte' | 'básico' | 'intermedio' | 'avanzado' | 'profesional'
   flavorNotes: string[]
   image: string
   stock: number
@@ -44,7 +44,7 @@ export interface Address {
 }
 
 export interface CustomerPreferences {
-  favoriteCategory?: 'soluble' | 'grano'
+  favoriteCategory?: 'soluble' | 'grano' | 'erp' | 'web' | 'mobile'
   flavorProfile?: string[]
   grindPreference?: string
   subscriptionActive?: boolean
@@ -87,7 +87,7 @@ export interface Review {
 export interface LeadCapture {
   name: string
   email: string
-  productType: 'soluble' | 'grano'
+  productType: 'soluble' | 'grano' | 'erp' | 'web' | 'mobile'
   preferredFlavor?: string
   quantity?: string
   grindType?: string

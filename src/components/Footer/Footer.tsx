@@ -5,7 +5,7 @@ import { Coffee, Facebook, Instagram, Twitter, Mail, Phone, MapPin } from 'lucid
 import { theme } from '../../styles/theme'
 
 const FooterContainer = styled.footer`
-  background: ${theme.colors.coffee.dark};
+  background: ${theme.colors.tech.dark};
   color: ${theme.colors.text.white};
   padding: ${theme.spacing.xxl} 0 ${theme.spacing.lg};
   margin-top: auto;
@@ -32,7 +32,7 @@ const FooterSection = styled.div`
   }
 
   a {
-    color: ${theme.colors.coffee.cream};
+    color: ${theme.colors.tech.accent};
     display: block;
     margin-bottom: ${theme.spacing.sm};
     transition: color 0.3s ease;
@@ -45,7 +45,7 @@ const FooterSection = styled.div`
 
 const BrandSection = styled(FooterSection)`
   p {
-    color: ${theme.colors.coffee.cream};
+    color: ${theme.colors.tech.accent};
     line-height: 1.6;
     margin-bottom: ${theme.spacing.md};
   }
@@ -72,7 +72,7 @@ const ContactInfo = styled.div`
   align-items: center;
   gap: ${theme.spacing.sm};
   margin-bottom: ${theme.spacing.sm};
-  color: ${theme.colors.coffee.cream};
+  color: ${theme.colors.tech.accent};
 
   svg {
     width: 20px;
@@ -91,7 +91,7 @@ const SocialIcon = styled.a`
   width: 40px;
   height: 40px;
   border-radius: ${theme.borderRadius.full};
-  background: ${theme.colors.coffee.medium};
+  background: ${theme.colors.tech.medium};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,7 +100,7 @@ const SocialIcon = styled.a`
   svg {
     width: 20px;
     height: 20px;
-    color: ${theme.colors.coffee.cream};
+    color: ${theme.colors.tech.accent};
   }
 
   &:hover {
@@ -117,20 +117,20 @@ const Newsletter = styled.form`
   input {
     flex: 1;
     padding: ${theme.spacing.sm} ${theme.spacing.md};
-    border: 1px solid ${theme.colors.coffee.medium};
+    border: 1px solid ${theme.colors.tech.medium};
     border-radius: ${theme.borderRadius.sm};
-    background: ${theme.colors.coffee.dark};
+    background: ${theme.colors.tech.dark};
     color: white;
 
     &::placeholder {
-      color: ${theme.colors.coffee.light};
+      color: ${theme.colors.tech.light};
     }
   }
 
   button {
     padding: ${theme.spacing.sm} ${theme.spacing.lg};
     background: ${theme.colors.secondary};
-    color: ${theme.colors.coffee.dark};
+    color: ${theme.colors.tech.dark};
     border-radius: ${theme.borderRadius.sm};
     font-weight: bold;
 
@@ -145,14 +145,14 @@ const BottomBar = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: ${theme.spacing.lg} ${theme.spacing.lg} 0;
-  border-top: 1px solid ${theme.colors.coffee.medium};
+  border-top: 1px solid ${theme.colors.tech.medium};
   margin-top: ${theme.spacing.xl};
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: ${theme.spacing.md};
-  color: ${theme.colors.coffee.light};
+  color: ${theme.colors.tech.light};
 
   @media (max-width: ${theme.breakpoints.tablet}) {
     flex-direction: column;
@@ -242,7 +242,7 @@ export const Footer: React.FC = () => {
           </ContactInfo>
           
           <h3 style={{ marginTop: theme.spacing.lg }}>Newsletter</h3>
-          <p style={{ color: theme.colors.coffee.cream, fontSize: '0.9rem' }}>
+          <p style={{ color: theme.colors.tech.accent, fontSize: '0.9rem' }}>
             Recibe ofertas exclusivas y contenido sobre café
           </p>
           <Newsletter onSubmit={handleNewsletterSubmit}>

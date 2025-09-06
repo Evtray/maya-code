@@ -48,7 +48,7 @@ const QuotationCard = styled.div`
 `
 
 const QuotationHeader = styled.div`
-  background: linear-gradient(135deg, ${theme.colors.primary} 0%, ${theme.colors.coffee.dark} 100%);
+  background: linear-gradient(135deg, ${theme.colors.primary} 0%, ${theme.colors.tech.dark} 100%);
   padding: ${theme.spacing.xl};
   color: white;
   
@@ -111,7 +111,7 @@ const QuotationBody = styled.div`
 `
 
 const ClientInfo = styled.div`
-  background: ${theme.colors.coffee.cream};
+  background: ${theme.colors.tech.accent};
   border-radius: ${theme.borderRadius.md};
   padding: ${theme.spacing.lg};
   margin-bottom: ${theme.spacing.xl};
@@ -153,20 +153,20 @@ const ProductsTable = styled.table`
   margin-bottom: ${theme.spacing.xl};
   
   thead {
-    background: ${theme.colors.coffee.cream};
+    background: ${theme.colors.tech.accent};
     
     th {
       padding: ${theme.spacing.md};
       text-align: left;
       color: ${theme.colors.primary};
       font-weight: 600;
-      border-bottom: 2px solid ${theme.colors.coffee.light};
+      border-bottom: 2px solid ${theme.colors.tech.light};
     }
   }
   
   tbody {
     tr {
-      border-bottom: 1px solid ${theme.colors.coffee.cream};
+      border-bottom: 1px solid ${theme.colors.tech.accent};
       
       &:hover {
         background: ${theme.colors.background};
@@ -194,7 +194,7 @@ const ProductsTable = styled.table`
       &.subtotal {
         td {
           padding: ${theme.spacing.md};
-          border-top: 2px solid ${theme.colors.coffee.light};
+          border-top: 2px solid ${theme.colors.tech.light};
           font-weight: 600;
         }
       }
@@ -220,7 +220,7 @@ const ProductsTable = styled.table`
 `
 
 const Benefits = styled.div`
-  background: ${theme.colors.coffee.cream};
+  background: ${theme.colors.tech.accent};
   border-radius: ${theme.borderRadius.md};
   padding: ${theme.spacing.lg};
   margin-bottom: ${theme.spacing.xl};
@@ -304,7 +304,7 @@ const ActionButton = styled.button`
   transition: all 0.3s ease;
   
   &:hover {
-    background: ${theme.colors.coffee.dark};
+    background: ${theme.colors.tech.dark};
     transform: translateY(-2px);
     box-shadow: ${theme.shadows.lg};
   }

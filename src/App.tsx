@@ -17,8 +17,12 @@ import ContactPage from './pages/ContactPage'
 import SelectionPage from './pages/SelectionPage'
 import LeadCaptureSoluble from './pages/LeadCaptureSoluble'
 import LeadCaptureGrano from './pages/LeadCaptureGrano'
+import LeadCaptureERP from './pages/LeadCaptureERP'
+import LeadCaptureWeb from './pages/LeadCaptureWeb'
+import LeadCaptureMobile from './pages/LeadCaptureMobile'
 import LeadConfirmation from './pages/LeadConfirmation'
 import QuotationPage from './pages/QuotationPage'
+import OrderConfirmationPage from './pages/OrderConfirmationPage'
 
 function App() {
   return (
@@ -27,7 +31,7 @@ function App() {
       <CartProvider>
         <Router>
           <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-            <Header cartItemsCount={3} />
+            <Header />
             
             <main style={{ flex: 1 }}>
               <Routes>
@@ -35,12 +39,16 @@ function App() {
                 <Route path="/seleccion" element={<SelectionPage />} />
                 <Route path="/lead-capture/soluble" element={<LeadCaptureSoluble />} />
                 <Route path="/lead-capture/grano" element={<LeadCaptureGrano />} />
+                <Route path="/lead-capture/erp" element={<LeadCaptureERP />} />
+                <Route path="/lead-capture/web" element={<LeadCaptureWeb />} />
+                <Route path="/lead-capture/mobile" element={<LeadCaptureMobile />} />
                 <Route path="/confirmacion-lead" element={<LeadConfirmation />} />
                 <Route path="/cotizacion" element={<QuotationPage />} />
                 <Route path="/productos" element={<ProductsPage />} />
                 <Route path="/producto/:id" element={<ProductDetailPage />} />
                 <Route path="/carrito" element={<CartPage />} />
                 <Route path="/checkout" element={<CheckoutPage />} />
+                <Route path="/confirmacion-orden" element={<OrderConfirmationPage />} />
                 <Route path="/nosotros" element={<AboutPage />} />
                 <Route path="/contacto" element={<ContactPage />} />
               </Routes>

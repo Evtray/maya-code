@@ -1,12 +1,12 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
-import { Coffee, Zap, ArrowRight, Check } from 'lucide-react'
+import { Database, Code, Smartphone, ArrowRight, Check } from 'lucide-react'
 import { theme } from '../styles/theme'
 
 const Container = styled.div`
   min-height: 100vh;
-  background: linear-gradient(135deg, ${theme.colors.coffee.dark} 0%, ${theme.colors.coffee.medium} 100%);
+  background: linear-gradient(135deg, ${theme.colors.primary} 0%, ${theme.colors.secondary} 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,7 +23,7 @@ const Header = styled.div`
   margin-bottom: ${theme.spacing.xxl};
   
   h1 {
-    color: ${theme.colors.coffee.cream};
+    color: ${theme.colors.tech.accent};
     font-size: 3rem;
     margin-bottom: ${theme.spacing.md};
     font-family: ${theme.fonts.heading};
@@ -34,7 +34,7 @@ const Header = styled.div`
   }
   
   p {
-    color: ${theme.colors.coffee.cream};
+    color: ${theme.colors.tech.accent};
     font-size: 1.3rem;
     opacity: 0.9;
   }
@@ -42,8 +42,10 @@ const Header = styled.div`
 
 const SelectionGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: ${theme.spacing.xl};
+  max-width: 1400px;
+  margin: 0 auto;
   
   @media (max-width: ${theme.breakpoints.tablet}) {
     grid-template-columns: 1fr;
@@ -84,7 +86,7 @@ const ProductOption = styled.div`
 const IconWrapper = styled.div`
   width: 80px;
   height: 80px;
-  background: ${theme.colors.coffee.cream};
+  background: ${theme.colors.tech.accent};
   border-radius: ${theme.borderRadius.md};
   display: flex;
   align-items: center;
@@ -146,7 +148,7 @@ const CTAButton = styled.button`
   transition: all 0.3s ease;
   
   &:hover {
-    background: ${theme.colors.coffee.dark};
+    background: ${theme.colors.tech.dark};
     gap: ${theme.spacing.md};
   }
   
@@ -161,7 +163,7 @@ const Badge = styled.span`
   top: ${theme.spacing.lg};
   right: ${theme.spacing.lg};
   background: ${theme.colors.secondary};
-  color: ${theme.colors.coffee.dark};
+  color: ${theme.colors.tech.dark};
   padding: ${theme.spacing.xs} ${theme.spacing.md};
   border-radius: ${theme.borderRadius.full};
   font-size: 0.9rem;
@@ -174,7 +176,7 @@ const FromSocial = styled.div`
   
   span {
     background: rgba(255, 255, 255, 0.2);
-    color: ${theme.colors.coffee.cream};
+    color: ${theme.colors.tech.accent};
     padding: ${theme.spacing.sm} ${theme.spacing.lg};
     border-radius: ${theme.borderRadius.full};
     font-size: 0.9rem;
@@ -189,79 +191,113 @@ const SelectionPage: React.FC = () => {
     <Container>
       <Content>
         <FromSocial>
-          <span>🔥 Oferta Exclusiva desde Redes Sociales - 20% OFF Primera Compra</span>
+          <span>🚀 Oferta de Lanzamiento - 25% OFF en tu Primera Compra</span>
         </FromSocial>
         
         <Header>
-          <h1>Bienvenido a MayaCode</h1>
-          <p>Selecciona tu experiencia de café perfecta</p>
+          <h1>Bienvenido a MayaCode Digital</h1>
+          <p>Selecciona la solución tecnológica perfecta para tu negocio</p>
         </Header>
         
         <SelectionGrid>
-          <ProductOption onClick={() => navigate('/lead-capture/soluble')}>
-            <Badge>Más Popular</Badge>
+          <ProductOption onClick={() => navigate('/lead-capture/erp')}>
+            <Badge>Más Vendido</Badge>
             <IconWrapper>
-              <Zap />
+              <Database />
             </IconWrapper>
-            <ProductTitle>Café Soluble Premium</ProductTitle>
+            <ProductTitle>Módulo de Inventario Básico</ProductTitle>
             <ProductDescription>
-              Para quienes buscan conveniencia sin sacrificar el sabor. 
-              Listo en segundos, perfecto para tu ritmo de vida.
+              Sistema ERP simplificado para gestionar tu inventario. 
+              Ideal para pequeñas tiendas y talleres.
             </ProductDescription>
             <Features>
               <Feature>
                 <Check />
-                <span>Preparación instantánea</span>
+                <span>Control de stock en tiempo real</span>
               </Feature>
               <Feature>
                 <Check />
-                <span>3 sabores disponibles</span>
+                <span>Alertas de bajo inventario</span>
               </Feature>
               <Feature>
                 <Check />
-                <span>Ideal para oficina y viajes</span>
+                <span>Reportes automáticos</span>
               </Feature>
               <Feature>
                 <Check />
-                <span>Envío gratis en primera compra</span>
+                <span>Instalación en menos de 1 hora</span>
               </Feature>
             </Features>
             <CTAButton>
-              Quiero Café Rápido
+              Obtener ERP por Q199
               <ArrowRight />
             </CTAButton>
           </ProductOption>
           
-          <ProductOption onClick={() => navigate('/lead-capture/grano')}>
-            <Badge>Experiencia Premium</Badge>
+          <ProductOption onClick={() => navigate('/lead-capture/web')}>
+            <Badge>Fácil de Usar</Badge>
             <IconWrapper>
-              <Coffee />
+              <Code />
             </IconWrapper>
-            <ProductTitle>Café en Grano Artesanal</ProductTitle>
+            <ProductTitle>Formulario Web con Validación</ProductTitle>
             <ProductDescription>
-              Para los verdaderos amantes del café. Personaliza cada detalle 
-              de tu experiencia cafetera.
+              Snippet profesional listo para copiar y pegar. 
+              Ahorra horas de desarrollo con código probado.
             </ProductDescription>
             <Features>
               <Feature>
                 <Check />
-                <span>7 perfiles de sabor únicos</span>
+                <span>Validación completa de campos</span>
               </Feature>
               <Feature>
                 <Check />
-                <span>Molienda personalizada</span>
+                <span>Protección anti-spam incluida</span>
               </Feature>
               <Feature>
                 <Check />
-                <span>Tostado fresco semanal</span>
+                <span>Fácilmente personalizable</span>
               </Feature>
               <Feature>
                 <Check />
-                <span>Asesoría de barista incluida</span>
+                <span>Compatible con cualquier sitio</span>
               </Feature>
             </Features>
             <CTAButton>
-              Personalizar Mi Café
+              Comprar por Q99
+              <ArrowRight />
+            </CTAButton>
+          </ProductOption>
+
+          <ProductOption onClick={() => navigate('/lead-capture/mobile')}>
+            <Badge>Innovador</Badge>
+            <IconWrapper>
+              <Smartphone />
+            </IconWrapper>
+            <ProductTitle>App de Pedidos Lite</ProductTitle>
+            <ProductDescription>
+              Aplicación móvil para restaurantes y negocios. 
+              Alternativa económica a las apps de delivery.
+            </ProductDescription>
+            <Features>
+              <Feature>
+                <Check />
+                <span>Menú digital interactivo</span>
+              </Feature>
+              <Feature>
+                <Check />
+                <span>Carrito de compras integrado</span>
+              </Feature>
+              <Feature>
+                <Check />
+                <span>Funciona sin internet constante</span>
+              </Feature>
+              <Feature>
+                <Check />
+                <span>Personalizable con tu marca</span>
+              </Feature>
+            </Features>
+            <CTAButton>
+              Adquirir App por Q499
               <ArrowRight />
             </CTAButton>
           </ProductOption>

@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { Coffee, ShoppingCart, Menu, X, User, Search } from 'lucide-react'
+import { Code, ShoppingCart, Menu, X, User, Search } from 'lucide-react'
 import { theme } from '../../styles/theme'
+import { useCart } from '../../context/CartContext'
 
 const HeaderContainer = styled.header`
   background: ${theme.colors.surface};
@@ -83,7 +84,7 @@ const IconButton = styled.button`
   position: relative;
 
   &:hover {
-    background: ${theme.colors.coffee.cream};
+    background: ${theme.colors.tech.accent};
   }
 
   svg {
@@ -146,36 +147,37 @@ const SearchBar = styled.div`
   }
 `
 
-interface HeaderProps {
-  cartItemsCount?: number
-}
-
-export const Header: React.FC<HeaderProps> = ({ cartItemsCount = 0 }) => {
+export const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { getItemCount } = useCart()
+  const cartItemsCount = getItemCount()
 
   return (
     <HeaderContainer>
       <HeaderWrapper>
         <Logo to="/">
-          <Coffee />
-          MayaCode
+          <Code />
+          MayaCode Digital
         </Logo>
 
         <Nav isOpen={isMobileMenuOpen}>
           <NavLink to="/productos" onClick={() => setIsMobileMenuOpen(false)}>
-            Productos
+            Catálogo
           </NavLink>
-          <NavLink to="/productos?category=soluble" onClick={() => setIsMobileMenuOpen(false)}>
-            Café Soluble
+          <NavLink to="/productos?category=erp" onClick={() => setIsMobileMenuOpen(false)}>
+            Sistemas ERP
           </NavLink>
-          <NavLink to="/productos?category=grano" onClick={() => setIsMobileMenuOpen(false)}>
-            Café en Grano
+          <NavLink to="/productos?category=web" onClick={() => setIsMobileMenuOpen(false)}>
+            Desarrollo Web
+          </NavLink>
+          <NavLink to="/productos?category=mobile" onClick={() => setIsMobileMenuOpen(false)}>
+            Apps Móviles
           </NavLink>
           <NavLink to="/nosotros" onClick={() => setIsMobileMenuOpen(false)}>
             Nosotros
           </NavLink>
           <NavLink to="/contacto" onClick={() => setIsMobileMenuOpen(false)}>
-            Contacto
+            Soporte
           </NavLink>
         </Nav>
 

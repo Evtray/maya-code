@@ -5,7 +5,7 @@ import { ProductCard } from '../components/ProductCard/ProductCard'
 import { theme } from '../styles/theme'
 import { Product } from '../types'
 import { useCart } from '../context/CartContext'
-import { Coffee, Truck, Shield, Award } from 'lucide-react'
+import { Code, Zap, Shield, Sparkles } from 'lucide-react'
 
 const Section = styled.section`
   padding: ${theme.spacing.xxl} 0;
@@ -110,63 +110,43 @@ const CTAButton = styled.button`
 const mockProducts: Product[] = [
   {
     id: '1',
-    name: 'Café Soluble Premium Antigua',
-    description: 'Sabor intenso y aroma inconfundible',
-    price: 85.00,
-    category: 'soluble',
-    origin: 'Antigua Guatemala',
-    intensity: 'fuerte',
-    flavorNotes: ['Chocolate', 'Caramelo', 'Nuez'],
-    image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400',
-    stock: 50,
+    name: 'Módulo de Inventario Básico (ERP)',
+    description: 'Gestión completa de productos, entradas y salidas de inventario',
+    price: 199.00,
+    category: 'erp',
+    origin: 'MayaCode Guatemala',
+    intensity: 'profesional',
+    flavorNotes: ['Control de Stock', 'Alertas', 'Reportes'],
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400',
+    stock: 100,
     isNew: true,
-    discount: 15
+    discount: 20
   },
   {
     id: '2',
-    name: 'Café en Grano Huehuetenango',
-    description: 'Notas frutales y acidez balanceada',
-    price: 125.00,
-    category: 'grano',
-    origin: 'Huehuetenango',
-    intensity: 'medio',
-    flavorNotes: ['Frutas rojas', 'Miel', 'Cítricos'],
-    image: 'https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400',
-    stock: 30,
-    isBestSeller: true,
-    roastDate: '2024-01-15',
-    altitude: 1800,
-    process: 'lavado',
-    farmer: 'Don Carlos Mendez'
+    name: 'Formulario Web con Validación',
+    description: 'Snippet listo para copiar y pegar con validación completa',
+    price: 99.00,
+    category: 'web',
+    origin: 'MayaCode Guatemala',
+    intensity: 'básico',
+    flavorNotes: ['Anti-spam', 'Validación', 'Personalizable'],
+    image: 'https://images.unsplash.com/photo-1555421689-491a97ff2040?w=400',
+    stock: 200,
+    isBestSeller: true
   },
   {
     id: '3',
-    name: 'Café Soluble Descafeinado',
-    description: 'Todo el sabor sin cafeína',
-    price: 75.00,
-    category: 'soluble',
-    origin: 'Cobán',
-    intensity: 'suave',
-    flavorNotes: ['Vainilla', 'Almendra', 'Miel'],
-    image: 'https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=400',
-    stock: 45
-  },
-  {
-    id: '4',
-    name: 'Café en Grano Edición Especial',
-    description: 'Reserva limitada de altura',
-    price: 165.00,
-    category: 'grano',
-    origin: 'Alta Verapaz',
-    intensity: 'fuerte',
-    flavorNotes: ['Chocolate negro', 'Especias', 'Tabaco'],
-    image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400',
-    stock: 20,
-    isNew: true,
-    roastDate: '2024-01-20',
-    altitude: 2000,
-    process: 'honey',
-    farm: 'Finca La Esperanza'
+    name: 'App de Pedidos Lite',
+    description: 'Aplicación móvil para restaurantes y delivery',
+    price: 499.00,
+    category: 'mobile',
+    origin: 'MayaCode Guatemala',
+    intensity: 'avanzado',
+    flavorNotes: ['Menú Digital', 'Carrito', 'PDF'],
+    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400',
+    stock: 50,
+    isNew: true
   }
 ]
 
@@ -179,9 +159,9 @@ const HomePage: React.FC = () => {
 
       <Section>
         <Container>
-          <SectionTitle>Productos Destacados</SectionTitle>
+          <SectionTitle>Productos Digitales Destacados</SectionTitle>
           <SectionSubtitle>
-            Descubre nuestra selección de cafés guatemaltecos de la más alta calidad
+            Soluciones tecnológicas listas para usar, accesibles y adaptadas para PyMEs guatemaltecas
           </SectionSubtitle>
 
           <ProductGrid>
@@ -196,38 +176,38 @@ const HomePage: React.FC = () => {
 
           <Features>
             <Feature>
-              <Coffee />
-              <h3>100% Guatemalteco</h3>
+              <Code />
+              <h3>Código Limpio y Documentado</h3>
               <p>
-                Café cultivado en las mejores fincas de Guatemala, 
-                con tradición y pasión por la calidad.
+                Productos desarrollados con las mejores prácticas,
+                documentación completa en español.
               </p>
             </Feature>
 
             <Feature>
-              <Truck />
-              <h3>Envío Gratis</h3>
+              <Zap />
+              <h3>Instalación Inmediata</h3>
               <p>
-                Envío gratuito en pedidos mayores a Q200. 
-                Entrega en 24-48 horas en ciudad capital.
+                Descarga instantánea de tu producto.
+                Listo para implementar en menos de 1 hora.
               </p>
             </Feature>
 
             <Feature>
               <Shield />
-              <h3>Garantía de Calidad</h3>
+              <h3>Soporte Local Garantizado</h3>
               <p>
-                Si no quedas satisfecho con tu compra, 
-                te devolvemos tu dinero sin preguntas.
+                Soporte técnico en español incluido.
+                Actualizaciones gratuitas por 6 meses.
               </p>
             </Feature>
 
             <Feature>
-              <Award />
-              <h3>Premiado</h3>
+              <Sparkles />
+              <h3>Innovación Continua</h3>
               <p>
-                Ganadores de múltiples premios nacionales 
-                e internacionales por nuestra calidad.
+                Productos actualizados constantemente
+                con las últimas tecnologías del mercado.
               </p>
             </Feature>
           </Features>
@@ -236,12 +216,12 @@ const HomePage: React.FC = () => {
 
       <CTASection>
         <Container>
-          <CTATitle>Únete al Club MayaCode</CTATitle>
+          <CTATitle>Transforma tu Negocio con MayaCode</CTATitle>
           <CTAText>
-            Suscríbete y recibe 15% de descuento en todas tus compras, 
-            además de contenido exclusivo sobre el mundo del café
+            Únete a cientos de PyMEs que ya digitalizaron sus procesos.
+            Obtén 25% de descuento en tu primera compra.
           </CTAText>
-          <CTAButton>Suscribirme Ahora</CTAButton>
+          <CTAButton>Ver Catálogo Completo</CTAButton>
         </Container>
       </CTASection>
     </>

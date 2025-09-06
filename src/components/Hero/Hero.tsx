@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { Coffee, ArrowRight, Zap } from 'lucide-react'
+import { Code, ArrowRight, Zap, Rocket, Shield } from 'lucide-react'
 import { theme } from '../../styles/theme'
 
 const HeroContainer = styled.section`
   min-height: 80vh;
-  background: linear-gradient(135deg, ${theme.colors.coffee.dark} 0%, ${theme.colors.coffee.medium} 100%);
+  background: linear-gradient(135deg, ${theme.colors.primary} 0%, ${theme.colors.secondary} 100%);
   display: flex;
   align-items: center;
   position: relative;
@@ -19,8 +19,9 @@ const HeroContainer = styled.section`
     right: -10%;
     width: 60%;
     height: 200%;
-    background: url('/coffee-beans-pattern.svg') center/cover;
-    opacity: 0.1;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.3;
     transform: rotate(45deg);
   }
 `
@@ -44,7 +45,7 @@ const HeroContent = styled.div`
 
 const HeroText = styled.div`
   h1 {
-    color: ${theme.colors.coffee.cream};
+    color: white;
     font-size: 3rem;
     margin-bottom: ${theme.spacing.lg};
     line-height: 1.2;
@@ -54,12 +55,12 @@ const HeroText = styled.div`
     }
 
     span {
-      color: ${theme.colors.secondary};
+      color: ${theme.colors.accent};
     }
   }
 
   p {
-    color: ${theme.colors.coffee.cream};
+    color: white;
     font-size: 1.2rem;
     margin-bottom: ${theme.spacing.xl};
     opacity: 0.9;
@@ -81,15 +82,15 @@ const PrimaryButton = styled(Link)`
   align-items: center;
   gap: ${theme.spacing.sm};
   padding: ${theme.spacing.md} ${theme.spacing.xl};
-  background: ${theme.colors.secondary};
-  color: ${theme.colors.coffee.dark};
+  background: white;
+  color: ${theme.colors.primary};
   border-radius: ${theme.borderRadius.md};
   font-weight: bold;
   font-size: 1.1rem;
   transition: all 0.3s ease;
 
   &:hover {
-    background: ${theme.colors.primary};
+    background: ${theme.colors.accent};
     color: white;
     transform: translateY(-2px);
     box-shadow: ${theme.shadows.lg};
@@ -103,12 +104,12 @@ const PrimaryButton = styled(Link)`
 
 const SecondaryButton = styled(PrimaryButton)`
   background: transparent;
-  color: ${theme.colors.coffee.cream};
-  border: 2px solid ${theme.colors.coffee.cream};
+  color: white;
+  border: 2px solid white;
 
   &:hover {
-    background: ${theme.colors.coffee.cream};
-    color: ${theme.colors.coffee.dark};
+    background: white;
+    color: ${theme.colors.primary};
   }
 `
 
@@ -148,7 +149,7 @@ const ProductCard = styled.div`
 const ProductIcon = styled.div`
   width: 60px;
   height: 60px;
-  background: ${theme.colors.coffee.cream};
+  background: ${theme.colors.tech.accent};
   border-radius: ${theme.borderRadius.md};
   display: flex;
   align-items: center;
@@ -192,12 +193,12 @@ const Feature = styled.div`
   display: flex;
   align-items: center;
   gap: ${theme.spacing.sm};
-  color: ${theme.colors.coffee.cream};
+  color: white;
 
   svg {
     width: 24px;
     height: 24px;
-    color: ${theme.colors.secondary};
+    color: ${theme.colors.accent};
   }
 `
 
@@ -207,14 +208,14 @@ export const Hero: React.FC = () => {
       <HeroContent>
         <HeroText>
           <h1>
-            Del Grano a Tu Taza
+            Transforma tu Negocio
             <br />
-            <span>Café Artesanal Guatemalteco</span>
+            <span>Soluciones Digitales para PyMEs</span>
           </h1>
           <p>
-            Descubre la tradición y el sabor auténtico del café guatemalteco. 
-            Desde las montañas de Alta Verapaz hasta tu hogar, con opciones 
-            para cada momento de tu día.
+            Productos tecnológicos listos para usar, accesibles y adaptados 
+            al mercado guatemalteco. Digitaliza tu empresa en menos de 1 hora 
+            con soporte local garantizado.
           </p>
 
           <CTAButtons>
@@ -223,23 +224,23 @@ export const Hero: React.FC = () => {
               Comenzar Mi Experiencia
             </PrimaryButton>
             <SecondaryButton to="/productos">
-              <Coffee />
+              <Code />
               Ver Catálogo Completo
             </SecondaryButton>
           </CTAButtons>
 
           <Features>
             <Feature>
-              <Coffee />
-              <span>100% Guatemalteco</span>
+              <Rocket />
+              <span>Instalación Rápida</span>
             </Feature>
             <Feature>
-              <Zap />
-              <span>Envío Gratis +Q200</span>
+              <Shield />
+              <span>Soporte en Español</span>
             </Feature>
             <Feature>
               <ArrowRight />
-              <span>Suscripción -15%</span>
+              <span>Garantía 7 Días</span>
             </Feature>
           </Features>
         </HeroText>
@@ -251,18 +252,18 @@ export const Hero: React.FC = () => {
                 <Zap />
               </ProductIcon>
               <ProductInfo>
-                <h3>Café Soluble Premium</h3>
-                <p>Listo en segundos, sabor de siempre</p>
+                <h3>Módulo ERP Básico</h3>
+                <p>Control de inventario profesional</p>
               </ProductInfo>
             </ProductCard>
 
             <ProductCard>
               <ProductIcon>
-                <Coffee />
+                <Code />
               </ProductIcon>
               <ProductInfo>
-                <h3>Café en Grano Artesanal</h3>
-                <p>Personalizado a tu gusto</p>
+                <h3>Desarrollo Web</h3>
+                <p>Snippets y plantillas listas</p>
               </ProductInfo>
             </ProductCard>
           </ProductCards>

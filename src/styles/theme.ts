@@ -1,25 +1,33 @@
 export const theme = {
   colors: {
-    primary: '#6B4423',
-    secondary: '#D4A574',
-    accent: '#8B7355',
-    success: '#4CAF50',
-    warning: '#FF9800',
-    error: '#f44336',
-    background: '#FDFBF7',
+    primary: '#2563EB',      // Blue
+    secondary: '#7C3AED',    // Purple
+    accent: '#10B981',       // Green
+    success: '#10B981',
+    warning: '#F59E0B',
+    error: '#EF4444',
+    background: '#F9FAFB',
     surface: '#FFFFFF',
     text: {
-      primary: '#2C1810',
-      secondary: '#5D4E37',
-      light: '#8B7355',
-      white: '#FFFFFF'
+      primary: '#111827',
+      secondary: '#6B7280',
+      light: '#9CA3AF',
+      white: '#FFFFFF',
+      disabled: '#D1D5DB'
     },
-    coffee: {
-      dark: '#3E2723',
-      medium: '#6D4C41',
-      light: '#A1887F',
-      cream: '#F5E6D3'
-    }
+    gradient: {
+      primary: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      secondary: 'linear-gradient(135deg, #2563EB 0%, #7C3AED 100%)',
+      dark: 'linear-gradient(135deg, #1F2937 0%, #111827 100%)'
+    },
+    tech: {
+      dark: '#1F2937',
+      medium: '#374151',
+      light: '#E5E7EB',
+      accent: '#F3F4F6'
+    },
+    border: '#E5E7EB',
+    disabled: '#D1D5DB'
   },
   fonts: {
     main: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
@@ -48,7 +56,8 @@ export const theme = {
   shadows: {
     sm: '0 2px 4px rgba(0,0,0,0.1)',
     md: '0 4px 8px rgba(0,0,0,0.15)',
-    lg: '0 8px 16px rgba(0,0,0,0.2)'
+    lg: '0 8px 16px rgba(0,0,0,0.2)',
+    xl: '0 12px 24px rgba(0,0,0,0.25)'
   }
 }
 
